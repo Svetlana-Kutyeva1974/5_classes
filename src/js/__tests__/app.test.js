@@ -12,8 +12,8 @@ test.each([
   'should return a string corresponding to the health level',
   (name, type, createNewObject) => {
     for (const key of Object.values(heroes)) {
-      const K = key;
-      const result = new K(name, type);
+      const ClassName = key;
+      const result = new ClassName(name, type);
       expect(result).toEqual(createNewObject);
     }
   },
