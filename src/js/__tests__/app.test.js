@@ -19,9 +19,13 @@ test.each([
   },
 );
 
-/* test('person return value live level :wounded', () => {
-  expect(person({ name: 'Маг', health: 45 })).toBe('wounded');
+test('string length name error', () => {
+  const result2 = new heroes.Magician('heroismerror', 'Magician');
+  expect(result2).toThrowError('Ошибка, имя должно содержать не менее 2 и не более 10 символов');
 });
-test('person return value live level : critical', () => {
-  expect(person({ name: 'Лучник', health: 10 })).toBe('critical');
-}); */
+test('type error', () => {
+  const result3 = new heroes.Character('hero5', 'Magiciancheck');
+  const err1 = 'Ошибка, недопустимый тип элемента';
+  console.log(result3, err1);
+  expect(result3).toThrowError(err1);
+});
