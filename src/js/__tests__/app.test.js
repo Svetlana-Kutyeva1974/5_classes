@@ -26,6 +26,5 @@ test('string length name error', () => {
 test('type error', () => {
   const result3 = new heroes.Character('hero5', 'Magiciancheck');
   const err1 = 'Ошибка, недопустимый тип элемента';
-  console.log(result3, err1);
   expect(result3).toThrowError(err1);
 });
