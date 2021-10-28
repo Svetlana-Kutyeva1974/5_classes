@@ -13,7 +13,9 @@
         "sourceType": "module"
     },
     "rules": {
+        "prefer-destructuring": ["error", {"object": true, "array": false}],
         "no-unused-vars": "warn",
+        "max-classes-per-file": "off",
         "no-multiple-empty-lines": "warn",
         "no-restricted-syntax": [
         "error",
