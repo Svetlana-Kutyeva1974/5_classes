@@ -1,4 +1,4 @@
-export class Character {
+export default class Character {
 static TYPES = {
   Bowman: [25, 25],
   Swordsman: [40, 10],
@@ -19,20 +19,5 @@ constructor(name, type) { //
   this.type = type;
   this.health = 100;
   this.level = 1;
-  this.attack = Character.TYPES[`${type}`][0];
-  this.defence = Character.TYPES[`${type}`][1];
 }
-}
-
-export class Bowman extends Character {
-}
-export class Magician extends Character {
-}
-export class Swordsman extends Character {
-}
-export class Daemon extends Character {
-}
-export class Zombie extends Character {
-}
-export class Undead extends Character {
 }
