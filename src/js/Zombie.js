@@ -1,4 +1,5 @@
 import Character from './app.js';
+
 export default class Zombie extends Character {
   constructor(...args) {
     super(...args);

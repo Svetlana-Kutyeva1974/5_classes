@@ -1,4 +1,5 @@
 import Character from './app.js';
+
 export default class Daemon extends Character {
   constructor(...args) {
     super(...args);

@@ -1,4 +1,5 @@
 import Character from './app.js';
+
 export default class Bowman extends Character {
   constructor(...args) {
     super(...args);
@@ -6,4 +7,3 @@ export default class Bowman extends Character {
     this.defence = Character.TYPES[`${this.type}`][1];
   }
 }
-

@@ -16,4 +16,3 @@ test('string length name error', () => {
   const result2 = new Character('hero', 'Daemon');
   expect(result2).toEqual(result1);
 });
-

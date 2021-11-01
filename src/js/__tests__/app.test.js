@@ -1,5 +1,5 @@
 import Character from '../app.js';
-/*test.each([
+/* test.each([
   ['hero1', 'Bowman', new Character('hero1', 'Bowman')],
   ['hero2', 'Bowman', new Character('hero2', 'Bowman')],
 ])(
@@ -24,7 +24,7 @@ test('string length name error', () => {
 
 test('string length name error', () => {
   const result2 = new Character('heroismerror', 'Magician');
-  expect(result2).not.toThrowError(new Error ('Ошибка, имя должно содержать не менее 2 и не более 10 символов'));
+  expect(result2).not.toThrowError(new Error('Ошибка, имя должно содержать не менее 2 и не более 10 символов'));
 });
 test('type error', () => {
   const result3 = new Character('hero5', 'Magiciancheck');
