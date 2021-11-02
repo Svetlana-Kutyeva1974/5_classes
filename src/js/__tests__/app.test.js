@@ -23,11 +23,12 @@ test('string length name error', () => {
 });
 
 test('string length name error', () => {
-  const result2 = new Character('heroismerror', 'Magician');
-  expect(result2).not.toThrowError(new Error('Ошибка, имя должно содержать не менее 2 и не более 10 символов'));
+  expect(() => {
+    const result2 = new Character('heroismerror', 'Magician');
+    }).toThrow(/Ошибка, имя должно содержать не менее 2 и не более 10 символов/);
 });
 test('type error', () => {
-  const result3 = new Character('hero5', 'Magiciancheck');
-  const err1 = 'Ошибка, недопустимый тип элемента';
-  expect(result3).not.toThrowError(err1);
+   expect(() => {
+   const result3 = new Character('hero5', 'Magiciancheck');
+   }).toThrow(/Ошибка, недопустимый тип элемента/);
 });
