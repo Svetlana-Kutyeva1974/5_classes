@@ -1,17 +1,5 @@
 import Character from '../app.js';
-/* test.each([
-  ['hero1', 'Bowman', new Character('hero1', 'Bowman')],
-  ['hero2', 'Bowman', new Character('hero2', 'Bowman')],
-])(
-  'should return a string corresponding to the health level',
-  (name, type, createNewObject) => {
-      const result = new Character(name, type);
-      expect(result).toEqual(createNewObject);
-      expect(result.name).toBe(name);
-      expect(result.type).toBe(type);
-  },
-);
-*/
+
 test('string length name error', () => {
   const result2 = new Character('hero', 'Magician');
   expect(result2.name).toMatch(/hero/);
