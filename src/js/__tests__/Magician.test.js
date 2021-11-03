@@ -8,11 +8,11 @@ test('string length name error', () => {
 
 test('string length name error', () => {
   const result0 = new Magician('hero', 'Magician');
-  expect(result0.defence).toEqual(Character.TYPES[`${result0.type}`][1]);
+  expect(result0.defence).toBe(Character.TYPES[`${result0.type}`][1]);
 });
 
 test('string length name error', () => {
-  const result1 = new Magician('hero', 'Magician');
-  const result2 = new Character('hero', 'Magician');
-  expect(result2).toBe(result1);
+  const result1 = new Magician('hero2', 'Magician');
+  const result2 = new Character('hero2', 'Magician');
+  expect(result2).not.toMatchObject(result1);
 });

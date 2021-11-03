@@ -14,20 +14,24 @@ import Character from '../app.js';
 */
 test('string length name error', () => {
   const result2 = new Character('hero', 'Magician');
-  expect(result2.name).toEqual('hero');
+  expect(result2.name).toMatch(/hero/);
 });
 
-test('string length name error', () => {
+test('app string length name error', () => {
   const result = new Character('hero', 'Magician');
-  expect(result.type).toEqual('Magician');
+  expect(result.type).toMatch(/Magician/);
 });
 
-test('string length name error', () => {
-  const result2 = new Character('heroismerror', 'Magician');
-  expect(result2).not.toThrowError(new Error('Ошибка, имя должно содержать не менее 2 и не более 10 символов'));
+test('app string length name error', () => {
+  expect(() => {
+    // eslint-disable-next-line no-unused-vars
+    const obj = new Character('heroismerror', 'Magician');
+  }).toThrow(/Ошибка, имя должно содержать не менее 2 и не более 10 символов/);
 });
-test('type error', () => {
-  const result3 = new Character('hero5', 'Magiciancheck');
-  const err1 = 'Ошибка, недопустимый тип элемента';
-  expect(result3).not.toThrowError(err1);
+
+test('app type error ', () => {
+  expect(() => {
+    // eslint-disable-next-line no-unused-vars
+    const result3 = new Character('hero5', 'Magiciancheck');
+  }).toThrow(/Ошибка, недопустимый тип элемента/);
 });
